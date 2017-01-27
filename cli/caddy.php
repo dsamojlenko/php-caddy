@@ -21,10 +21,10 @@ $app = new Application('GCSX Caddy', $version);
 
 $app->command('up', function() {
     Caddy::up();
-});
+})->descriptions('Start it up!');
 
 $app->command('down', function() {
     Caddy::down();
-});
+})->descriptions('Shut it down!');
 
 $app->run();
