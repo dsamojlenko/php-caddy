@@ -3,5 +3,4 @@
     rewrite {
         to {path} {path}/ /index.php?{query}
     }
-    startup startup.bat
 }

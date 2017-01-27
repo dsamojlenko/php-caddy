@@ -6,10 +6,18 @@ class Caddy
     {
         info('Caddying up...');
 
+        $caddypath = VALET_BIN_PATH . '\\..\\';
         $public_path = realpath(getcwd()) . '\public';
         info('Web root: ' . $public_path);
 
-        exec(VALET_BIN_PATH . 'RunHiddenConsole.exe ' . VALET_BIN_PATH . 'caddy.exe -conf Caddyfile -root ' . $public_path);
+        info('Starting php-cgi');
+        exec(VALET_BIN_PATH . '\RunHiddenConsole.exe ' . 'C:\php\php-cgi.exe -b 127.0.0.1:9000');
+
+        info('Starting mailhog');
+        exec(VALET_BIN_PATH . '\RunHiddenConsole.exe ' . VALET_BIN_PATH . '\mailhog.exe');
+
+        info('Starting Caddy');
+        exec(VALET_BIN_PATH . '\RunHiddenConsole.exe ' . VALET_BIN_PATH . '\caddy.exe -conf ' . $caddypath . '\Caddyfile -root ' . $public_path);
 
         info('Success!');
         info('You may access your site at http://localhost');
@@ -28,5 +36,10 @@ class Caddy
 
         info('Kill the Php');
         exec('taskkill /im php-cgi.exe');
+    }
+
+    function status()
+    {
+
     }
 }
