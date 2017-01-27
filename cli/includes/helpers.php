@@ -1,15 +1,13 @@
 <?php
 
 use Illuminate\Container\Container;
-use Symfony\Component\Process\Process;
 
-/**
- * Define the ~/.valet path as a constant.
+/*
+ * Get the package bin folder path and set as constant
  */
 $bin = realpath(dirname(__FILE__));
 $bin .= '\\..\\..\\bin\\';
 define('VALET_BIN_PATH', $bin);
-// define('CMD_VALET_START', 'start "Valet" cmd.exe /i/k "cd /d ' . VALET_BIN_PATH . '..\ && start.bat"');
 
 /**
  * Output the given text to the console.
