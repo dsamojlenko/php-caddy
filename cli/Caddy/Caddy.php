@@ -4,11 +4,13 @@ class Caddy
 {
     function up()
     {
-        output('Caddying up...');
-        exec('bin\RunHiddenConsole.exe bin\caddy.exe -conf Caddyfile -root public');
+        info('Caddying up...');
 
-        $path = realpath(getcwd());
-        info($path);
+        $public_path = realpath(getcwd()) . '\public';
+        info('Web root: ' . $public_path);
+        info('Caddy bin: ' . VALET_BIN_PATH);
+
+        exec(VALET_BIN_PATH . 'RunHiddenConsole.exe ' . VALET_BIN_PATH . 'caddy.exe -conf Caddyfile -root ' . $public_path);
     }
 
     function down()

@@ -6,9 +6,10 @@ use Symfony\Component\Process\Process;
 /**
  * Define the ~/.valet path as a constant.
  */
-define('VALET_HOME_PATH', $_SERVER['HOME'].'/.valet');
-define('VALET_SERVER_PATH', realpath(__DIR__ . '/../../server.php'));
-define('VALET_STATIC_PREFIX', '41c270e4-5535-4daa-b23e-c269744c2f45');
+$bin = realpath(dirname(__FILE__));
+$bin .= '\\..\\..\\bin\\';
+define('VALET_BIN_PATH', $bin);
+// define('CMD_VALET_START', 'start "Valet" cmd.exe /i/k "cd /d ' . VALET_BIN_PATH . '..\ && start.bat"');
 
 /**
  * Output the given text to the console.
