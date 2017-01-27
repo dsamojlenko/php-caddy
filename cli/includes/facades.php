@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Container\Container;
+
 class Facade
 {
     /**
@@ -21,10 +23,11 @@ class Facade
      */
     public static function __callStatic($method, $parameters)
     {
-        return call_user_func_array([resolve(static::containerKey()), $method], $parameters);
+        $resolvedInstance = Container::getInstance()->make(static::containerKey());
+
+        return call_user_func_array([$resolvedInstance, $method], $parameters);
     }
 }
 
 class Caddy extends Facade {}
-
 
