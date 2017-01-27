@@ -30,3 +30,5 @@ class Facade
 }
 
 class Caddy extends Facade {}
+class Mailhog extends Facade {}
+class PhpCgi extends Facade {}
