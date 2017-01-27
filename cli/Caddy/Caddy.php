@@ -19,7 +19,7 @@ class Caddy
         info('Starting Caddy');
         exec(VALET_BIN_PATH . '\RunHiddenConsole.exe ' . VALET_BIN_PATH . '\caddy.exe -conf ' . $caddypath . '\Caddyfile -root ' . $public_path);
 
-        info('Success!');
+        info('We make Success!');
         info('You may access your site at http://localhost');
         info('You may access mailhog at http://localhost:8025');
     }
@@ -29,13 +29,13 @@ class Caddy
         info('Caddying down...');
 
         info('Kill the Caddy');
-        exec('taskkill /im caddy.exe');
+        exec('taskkill /im caddy.exe /f >nul 2>&1');
 
         info('Kill the Mailhog');
-        exec('taskkill /im mailhog.exe');
+        exec('taskkill /im mailhog.exe /f >nul 2>&1');
 
         info('Kill the Php');
-        exec('taskkill /im php-cgi.exe');
+        exec('taskkill /im php-cgi.exe /f >nul 2>&1');
     }
 
     function status()
