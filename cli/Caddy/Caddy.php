@@ -19,10 +19,13 @@ class Caddy
     function down()
     {
         info('Caddying down...');
+
         info('Kill the Caddy');
         exec('taskkill /im caddy.exe');
+
         info('Kill the Mailhog');
         exec('taskkill /im mailhog.exe');
+
         info('Kill the Php');
         exec('taskkill /im php-cgi.exe');
     }

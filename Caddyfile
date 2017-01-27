@@ -4,5 +4,4 @@
         to {path} {path}/ /index.php?{query}
     }
     startup startup.bat
-    shutdown shutdown.bat
 }
