@@ -4,7 +4,9 @@ class Caddy
 {
     function up()
     {
-        exec('caddy.exe');
+
+
+        // exec('caddy.exe');
     }
 
     function down()

@@ -5,16 +5,17 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "GCSX Caddy",
+      "name": "Dave Samojlenko",
       "email": "dave.samojlenko@canada.ca"
     }
   ],
   "autoload": {
     "files": [
-
+      "cli/includes/facades.php",
+      "cli/includes/helpers.php"
     ],
     "psr-4": {
-      "GCSX\\Caddy\\": "src/"
+      "GCSX\\Caddy\\": "cli/Caddy/"
     }
   },
   "require": {
