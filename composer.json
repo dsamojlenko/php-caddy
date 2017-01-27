@@ -11,7 +11,8 @@
   ],
   "autoload": {
     "files": [
-      "cli/includes/helpers.php"
+      "cli/includes/helpers.php",
+      "cli/includes/facades.php"
     ],
     "psr-4": {
       "Caddy\\": "cli/Caddy/"

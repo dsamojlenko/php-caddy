@@ -20,16 +20,16 @@ $version = '0.1';
 $app = new Application('GCSX Caddy', $version);
 
 $app->command('up', function() {
-    output('Huzzah Up');
-    // Caddy::up();
+
+    Caddy::up();
     // exec('caddy.exe');
 });
 
 $app->command('down', function() {
-    info('Huzzah Down');
-    // Caddy::down();
 
-    exec('taskkill /im caddy.exe');
+    Caddy::down();
+
+    // exec('taskkill /im caddy.exe');
     // exec('taskkill /im mailhog.exe');
     // exec('taskkill /im php-cgi.exe');
 });
