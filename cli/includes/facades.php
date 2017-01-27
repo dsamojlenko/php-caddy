@@ -9,7 +9,7 @@ class Facade
      */
     public static function containerKey()
     {
-        return 'GCSX\\Caddy\\'.basename(str_replace('\\', '/', get_called_class()));
+        return 'Caddy\\'.basename(str_replace('\\', '/', get_called_class()));
     }
 
     /**

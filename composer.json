@@ -15,7 +15,7 @@
       "cli/includes/helpers.php"
     ],
     "psr-4": {
-      "GCSX\\Caddy\\": "cli/Caddy/"
+      "Caddy\\": "cli/Caddy/"
     }
   },
   "require": {

@@ -1,4 +1,4 @@
-<?php namespace GCSX\Caddy;
+<?php namespace Caddy;
 
 class Caddy
 {
