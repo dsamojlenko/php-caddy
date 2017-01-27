@@ -1,0 +1,35 @@
+{
+  "name": "gcsx/caddy",
+  "description": "A more enjoyable local development experience for Windows.",
+  "keywords": ["laravel", "windows", "caddy", "caddyserver"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "GCSX Caddy",
+      "email": "dave.samojlenko@canada.ca"
+    }
+  ],
+  "autoload": {
+    "files": [
+
+    ],
+    "psr-4": {
+      "GCSX\\Caddy\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.5.9",
+    "illuminate/container": "~5.1",
+    "mnapoli/silly": "~1.0",
+    "symfony/process": "~2.7|~3.0",
+    "nategood/httpful": "~0.2",
+    "tightenco/collect": "^5.2"
+  },
+  "require-dev": {
+    "mockery/mockery": "0.9.*",
+    "phpunit/phpunit": ">=4.8.24"
+  },
+  "bin": [
+    "caddy"
+  ]
+}

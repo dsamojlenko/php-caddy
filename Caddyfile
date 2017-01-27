@@ -1,0 +1,8 @@
+*:80 {
+    fastcgi / 127.0.0.1:9000 php
+    rewrite {
+        to {path} {path}/ /index.php?{query}
+    }
+    startup startup.bat
+    shutdown shutdown.bat
+}
