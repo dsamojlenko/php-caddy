@@ -22,9 +22,7 @@
     "php": ">=5.5.9",
     "illuminate/container": "~5.1",
     "mnapoli/silly": "~1.0",
-    "symfony/process": "~2.7|~3.0",
-    "nategood/httpful": "~0.2",
-    "tightenco/collect": "^5.2"
+    "symfony/process": "~2.7|~3.0"
   },
   "require-dev": {
     "mockery/mockery": "0.9.*",
