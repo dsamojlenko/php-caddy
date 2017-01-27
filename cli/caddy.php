@@ -20,7 +20,7 @@ $version = '0.1';
 $app = new Application('GCSX Caddy', $version);
 
 $app->command('up', function() {
-    info('Huzzah Up');
+    output('Huzzah Up');
     // Caddy::up();
 });
 
@@ -28,3 +28,5 @@ $app->command('down', function() {
     info('Huzzah Down');
     // Caddy::down();
 });
+
+$app->run();
