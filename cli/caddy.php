@@ -15,7 +15,7 @@ use Illuminate\Container\Container;
 
 Container::setInstance(new Container);
 
-$version = '0.1';
+$version = '0.2';
 
 $app = new Application('GCSX Caddy', $version);
 
@@ -25,16 +25,17 @@ $app->command('up', function() {
     Mailhog::start();
     Caddy::start();
 
-    info('We make Success!');
+    info('Caddy services have been started.');
     info('You may access your site at http://localhost');
     info('You may access mailhog at http://localhost:8025');
-})->descriptions('Start it up!');
+})->descriptions('Start up the Caddy services');
 
 $app->command('down', function() {
     info('Caddying down...');
     Caddy::stop();
     PhpCgi::stop();
     Mailhog::stop();
-})->descriptions('Shut it down!');
+    info('Caddy services have been stopped');
+})->descriptions('Tear down the Caddy services.');
 
 $app->run();
