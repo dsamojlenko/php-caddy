@@ -15,15 +15,15 @@ use Illuminate\Container\Container;
 
 Container::setInstance(new Container);
 
-$version = '0.2';
+$version = '0.3';
 
 $app = new Application('GCSX Caddy', $version);
 
 $app->command('up', function() {
     info('Caddying up...');
-    PhpCgi::start();
-    Mailhog::start();
-    Caddy::start();
+    PhpCgi::restart();
+    Mailhog::restart();
+    Caddy::restart();
 
     info('Caddy services have been started.');
     info('You may access your site at http://localhost');
