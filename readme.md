@@ -9,9 +9,10 @@ particular use-case.  If you are on MacOS you should just use [Laravel Valet](ht
 If you want something more Valet-like for Windows, check out [Valet4Windows](https://github.com/vitr/valet4windows).
 
 ## Requirements
-- php-cgi.exe (installed in C:\php)
+- PHP (installed in C:\php)
+- Composer
 - Git Bash
-- Whatever you need for Laravel dev (PHP, MySQL/Mariadb, ...)
+- Whatever database, if you need (MySql/Mariadb/Sqlite)
 
 ## Installation instructions
 ```
