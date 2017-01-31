@@ -9,9 +9,11 @@ class DownCommand
     public function __invoke(Caddy $caddy, Mailhog $mailhog, PhpCgi $php)
     {
         info('Caddying down...');
+
         $caddy->stop();
         $php->stop();
         $mailhog->stop();
+
         info('Caddy services have been stopped');
     }
 

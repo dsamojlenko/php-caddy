@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Container\Container;
-
 /*
  * Get the package paths and set as constants
  */
@@ -48,5 +46,3 @@ function output($output)
 
     (new Symfony\Component\Console\Output\ConsoleOutput)->writeln($output);
 }
-
-

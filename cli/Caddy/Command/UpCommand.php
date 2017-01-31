@@ -3,11 +3,10 @@
 use Caddy\Caddy;
 use Caddy\Mailhog;
 use Caddy\PhpCgi;
-use Symfony\Component\Console\Output\OutputInterface;
 
 class UpCommand
 {
-    public function __invoke(Caddy $caddy, Mailhog $mailhog, PhpCgi $php, OutputInterface $output)
+    public function __invoke(Caddy $caddy, Mailhog $mailhog, PhpCgi $php)
     {
         info('Caddying up...');
 
