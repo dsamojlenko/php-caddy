@@ -4,7 +4,7 @@ this package also includes [Mailhog](https://github.com/mailhog/MailHog) for cat
 
 No hosts file, no configuration.  Just run it and go.
 
-NOTE: This package is early in development.  It's very limited in its capabilities and it may not work for your
+NOTE: This package is very limited in its capabilities and it may not work for your
 particular use-case.  If you are on MacOS you should just use [Laravel Valet](https://laravel.com/docs/5.4/valet).  
 If you want something more Valet-like for Windows, check out [Valet4Windows](https://github.com/vitr/valet4windows).
 
