@@ -9,7 +9,7 @@ class Caddy
 
         $console_bin = BIN_PATH . '\RunHiddenConsole.exe';
         $caddy_bin = BIN_PATH . '\caddy.exe';
-        
+
         $args = '-root ' . $public_path;
         $args .= ' -conf ' . $caddy_file;
 
