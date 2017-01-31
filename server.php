@@ -14,7 +14,7 @@ function show_valet_404()
  * Parse the URI and site / host for the incoming request.
  */
 $uri = urldecode(
-    explode("?", $_SERVER['REQUEST_URI'])[0]
+    parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
 );
 
 $valetSitePath = getcwd();
