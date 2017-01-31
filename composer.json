@@ -11,8 +11,7 @@
   ],
   "autoload": {
     "files": [
-      "cli/includes/helpers.php",
-      "cli/includes/facades.php"
+      "cli/includes/helpers.php"
     ],
     "psr-4": {
       "Caddy\\": "cli/Caddy/"
@@ -20,9 +19,9 @@
   },
   "require": {
     "php": ">=5.5.9",
-    "illuminate/container": "~5.1",
     "mnapoli/silly": "~1.0",
-    "symfony/process": "~2.7|~3.0"
+    "symfony/process": "~2.7|~3.0",
+    "mnapoli/silly-php-di": "^1.1"
   },
   "require-dev": {
     "mockery/mockery": "0.9.*",

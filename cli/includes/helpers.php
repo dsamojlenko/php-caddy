@@ -3,11 +3,14 @@
 use Illuminate\Container\Container;
 
 /*
- * Get the package bin folder path and set as constant
+ * Get the package paths and set as constants
  */
-$bin = realpath(dirname(__FILE__));
-$bin .= '\\..\\..\\bin\\';
-define('VALET_BIN_PATH', $bin);
+$package_includes_path = realpath(dirname(__FILE__));
+$package_base_path = $package_includes_path . '\\..\\..\\';
+$package_bin_path = $package_base_path . '\\bin\\';
+
+define('BIN_PATH', $package_bin_path);
+define('BASE_PATH', $package_base_path);
 
 /**
  * Output the given text to the console.

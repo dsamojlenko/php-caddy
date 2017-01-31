@@ -4,11 +4,10 @@ class Caddy
 {
     function restart()
     {
-        $caddypath = VALET_BIN_PATH . '\\..\\';
         $public_path = realpath(getcwd()) . '\public';
 
         $this->stop();
-        exec(VALET_BIN_PATH . '\RunHiddenConsole.exe ' . VALET_BIN_PATH . '\caddy.exe -conf ' . $caddypath . '\Caddyfile -root ' . $public_path);
+        exec(BIN_PATH . '\RunHiddenConsole.exe ' . BIN_PATH . '\caddy.exe -conf ' . BASE_PATH . '\Caddyfile -root ' . $public_path);
     }
 
     function stop()
