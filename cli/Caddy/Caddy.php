@@ -4,7 +4,8 @@ class Caddy
 {
     function restart()
     {
-        $public_path = realpath(getcwd()) . '\public';
+        // $public_path = realpath(getcwd()) . '\public';
+        $public_path = BASE_PATH;
         $caddy_file = BASE_PATH . '\Caddyfile';
 
         $console_bin = BIN_PATH . '\RunHiddenConsole.exe';
