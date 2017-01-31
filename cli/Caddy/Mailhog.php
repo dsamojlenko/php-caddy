@@ -5,7 +5,7 @@ class Mailhog
     function restart()
     {
         $this->stop();
-        exec(VALET_BIN_PATH . '\RunHiddenConsole.exe ' . VALET_BIN_PATH . '\mailhog.exe');
+        exec(BIN_PATH . '\RunHiddenConsole.exe ' . BIN_PATH . '\mailhog.exe');
     }
 
     function stop()
