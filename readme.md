@@ -1,18 +1,17 @@
 # Introduction
-This is a tiny Windows dev environment for Laravel applications.  Based on [Caddy](https://caddyserver.com/), 
+GCSX Caddy is a tiny Windows dev environment for Laravel applications.  Based on [Caddy](https://caddyserver.com/), 
 this package also includes [Mailhog](https://github.com/mailhog/MailHog) for catching your applications emails.  
 
-No hosts file, no configuration.  Just run it and go.
+**No hosts file, no configuration.  Just run it and go.**
 
-NOTE: This package is very limited in its capabilities and it may not work for your
-particular use-case.  If you are on MacOS you should just use [Laravel Valet](https://laravel.com/docs/5.4/valet).  
-If you want something more Valet-like for Windows, check out [Valet4Windows](https://github.com/vitr/valet4windows).
+**NOTE**: This package is very limited in its capabilities and it may not work for your particular use-case.  
+- If you are on MacOS you should probably just use [Laravel Valet](https://laravel.com/docs/5.4/valet).  
+- If you want something more Valet-like for Windows, check out [Valet4Windows](https://github.com/vitr/valet4windows).
 
 ## Requirements
-- PHP (installed in C:\php)
-- Composer
-- Git Bash
-- Whatever database, if you need (MySql/Mariadb/Sqlite)
+- [PHP](http://windows.php.net/) (installed in C:\php and configured for Laravel)
+- [Composer](https://getcomposer.org/)
+- A database, if you need (MySql/Mariadb/Sqlite)
 
 ## Installation instructions
 ```
