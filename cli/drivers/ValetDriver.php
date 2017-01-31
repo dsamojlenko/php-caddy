@@ -143,25 +143,15 @@ abstract class ValetDriver
      */
     public function serveStaticFile($staticFilePath, $sitePath, $siteName, $uri)
     {
-        /**
-         * Back story...
-         *
-         * PHP docs *claim* you can set default_mimetype = "" to disable the default
-         * Content-Type header. This works in PHP 7+, but in PHP 5.* it sends an
-         * *empty* Content-Type header, which is significantly different than
-         * sending *no* Content-Type header.
-         *
-         * However, if you explicitly set a Content-Type header, then explicitly
-         * remove that Content-Type header, PHP seems to not re-add the default.
-         *
-         * I have a hard time believing this is by design and not coincidence.
-         *
-         * Burn. it. all.
-         */
-        header('Content-Type: text/html');
-        header_remove('Content-Type');
+        $extension = strtolower(pathinfo($staticFilePath)['extension']);
 
-        header('X-Accel-Redirect: /' . VALET_STATIC_PREFIX . $staticFilePath);
+        $mimes = require(__DIR__.'/../mimes.php');
+
+        $mime = isset($mimes[$extension]) ? $mimes[$extension] : 'application/octet-stream';
+
+        header('Content-Type: '. $mime);
+
+        readfile($staticFilePath);
     }
 
     /**
