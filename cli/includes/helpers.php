@@ -50,31 +50,3 @@ function output($output)
 }
 
 
-/* not sure I need these */
-
-if (! function_exists('resolve')) {
-    /**
-     * Resolve the given class from the container.
-     *
-     * @param  string  $class
-     * @return mixed
-     */
-    function resolve($class)
-    {
-        return Container::getInstance()->make($class);
-    }
-}
-
-/**
- * Swap the given class implementation in the container.
- *
- * @param  string  $class
- * @param  mixed  $instance
- * @return void
- */
-function swap($class, $instance)
-{
-    Container::getInstance()->instance($class, $instance);
-}
-
-
