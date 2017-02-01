@@ -1,4 +1,5 @@
 <?php
+define('VALET_HOME_PATH', $_SERVER['HOMEDRIVE'] . $_SERVER['HOMEPATH'].'/.phaddy');
 
 /**
  * Show the Valet 404 "Not Found" page.
