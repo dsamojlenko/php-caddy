@@ -1,8 +1,13 @@
 # Introduction
-GCSX Caddy is a **tiny** Windows dev environment for Laravel applications.  Based on [Caddy](https://caddyserver.com/), 
-this package also includes [Mailhog](https://github.com/mailhog/MailHog) for catching email sent by your application.  
+PHP Caddy is a **tiny** PHP development environment for Windows minimalists, inspired by Laravel Valet.
 
 **No hosts file, no configuration.  Just run it and go.**
+
+PHP Caddy is basically a stripped down Valet: no *.dev domain proxy (only localhost), no linking multiple sites, 
+and no sharing over local tunnels.  At least for now ;)
+
+Built with [Caddy](https://caddyserver.com/) web server, PHP Caddy also includes [Mailhog](https://github.com/mailhog/MailHog) 
+for catching email sent by your application.
 
 **NOTE**: This package is for extreme minimalists.  It is very limited in its capabilities and it may not work for 
 your particular use-case.
