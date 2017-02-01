@@ -3,9 +3,9 @@
 
 use Silly\Edition\PhpDi\Application;
 
-$version = '0.3';
+$version = '1.0';
 
-$app = new Application('GCSX Caddy', $version);
+$app = new Application('PHP Caddy', $version);
 
 $app->command('up', 'Caddy\Command\UpCommand')->descriptions('Start up the Cadddy services');
 $app->command('down', 'Caddy\Command\DownCommand')->descriptions('Tear down the Caddy services');
@@ -22,5 +22,8 @@ $app->command('which', function () {
         warning('Valet could not determine which driver to use for this site.');
     }
 })->descriptions('Determine which Valet driver serves the current working directory');
+
+
+// @TODO: create a command to list the current site link - maybe just append it to the above??
 
 $app->run();
