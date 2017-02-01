@@ -1,14 +1,17 @@
 <?php namespace Caddy\Command;
 
 use Caddy\Caddy;
+use Caddy\Filesystem;
 use Caddy\Mailhog;
 use Caddy\PhpCgi;
 
 class UpCommand
 {
-    public function __invoke(Caddy $caddy, Mailhog $mailhog, PhpCgi $php)
+    public function __invoke(Caddy $caddy, Mailhog $mailhog, PhpCgi $php, Filesystem $files)
     {
         info('Caddying up...');
+
+        $files->createSiteLink(getcwd());
 
         $php->restart();
         $caddy->restart();

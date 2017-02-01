@@ -22,7 +22,8 @@
     "php": ">=5.5.9",
     "mnapoli/silly": "~1.0",
     "symfony/process": "~2.7|~3.0",
-    "mnapoli/silly-php-di": "^1.1"
+    "mnapoli/silly-php-di": "^1.1",
+    "tightenco/collect": "^5.2"
   },
   "require-dev": {
     "mockery/mockery": "0.9.*",
