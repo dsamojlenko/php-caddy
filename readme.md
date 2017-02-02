@@ -58,6 +58,7 @@ caddy stop
 ### Coming soon
 
 | Command | Description |
+| --- | --- |
 | `caddy link` | Link current directory |
 | `caddy links` | Output a list of currently linked directories |
 | `caddy restart` | Restart PHP Caddy services |
