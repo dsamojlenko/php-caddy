@@ -25,8 +25,7 @@ robust features of a virtualized environment like Homestead.
 
 ## Installation instructions
 ```
-composer global config repositories.repo-name vcs https://gitlab.com/gcsx/caddy.git
-composer global require gcsx/caddy:dev-master
+composer global require samojled/php-caddy
 ```
 
 ## Usage
