@@ -5,7 +5,7 @@ use Caddy\Filesystem;
 use Caddy\Mailhog;
 use Caddy\PhpCgi;
 
-class UpCommand
+class StartCommand
 {
     public function __invoke(Caddy $caddy, Mailhog $mailhog, PhpCgi $php, Filesystem $files)
     {

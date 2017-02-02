@@ -4,7 +4,7 @@ use Caddy\Caddy;
 use Caddy\Mailhog;
 use Caddy\PhpCgi;
 
-class DownCommand
+class StopCommand
 {
     public function __invoke(Caddy $caddy, Mailhog $mailhog, PhpCgi $php)
     {
