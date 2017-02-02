@@ -12,7 +12,8 @@
   "autoload": {
     "files": [
       "cli/includes/helpers.php",
-      "cli/includes/compatibility.php"
+      "cli/includes/compatibility.php",
+      "cli/drivers/require.php"
     ],
     "psr-4": {
       "Caddy\\": "cli/Caddy/"
