@@ -1,7 +1,6 @@
 <?php namespace Caddy;
 
 use Symfony\Component\Console\Output\ConsoleOutput;
-use Symfony\Component\Console\Output\OutputInterface;
 
 class Output
 {
