@@ -3,7 +3,7 @@
 ## Introduction
 PHP Caddy is a **tiny** PHP development environment for Windows, inspired by Laravel Valet.
 
-**No hosts file, no configuration, no frills.  Just run it and go.**
+**No hosts file, no configuration, no frills.  Just run it and go write some code.**
 
 PHP Caddy is basically a stripped down Valet: no *.dev domain proxy (only localhost), no linking multiple sites or
 parking whole directories, and no sharing over local tunnels.  It also doesn't require elevated privileges to run
@@ -14,7 +14,7 @@ for catching email sent by your application.
 
 This package is for minimalists.  It does not have the full feature set of Valet, and it doesn't provide the
 robust features of a virtualized environment like Homestead.
-- If you are on MacOS you should probably just use [Laravel Valet](https://laravel.com/docs/5.4/valet).  
+- If you are on MacOS you should probably just use [Laravel Valet](https://laravel.com/docs/5.4/valet) because it's awesome.  
 - If you want something more Valet-like for Windows, check out [valet-windows](https://github.com/cretueusebiu/valet-windows).
 - If you want a fully virtualized Linux development environment, use [Laravel Homestead](https://laravel.com/docs/5.4/homestead).
 - If you're on Windows and you want a fast, easy to use local development environment with minimal resource consumption, read on!
