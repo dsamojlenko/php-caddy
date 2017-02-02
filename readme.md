@@ -34,7 +34,7 @@ Make sure your global composer vendor/bin folder is in your system path.
 
 ### Start it up
 ```
-cd {your laravel project directory}
+cd {your php project directory}
 caddy start
 ```
 
