@@ -1,10 +1,11 @@
 # TODO
 - ~~`caddy install` to install binaries to ~/.phpcaddy directory so upgrading doesn't require stopping services~~ 
-- incorporate https://github.com/kohsuke/winsw ?
+- replace HiddenConsole with https://github.com/kohsuke/winsw (?)
 - use http://localtest.me/ for wildcard subdomain support
 - allow multiple site links
-  - introduce `caddy link` and `caddy links`
+  - `caddy link` and `caddy links`
 - ~~change commands to `caddy start` and `caddy stop`~~
-- make Mailhog optional at startup
+- make Mailhog optional at startup and allow to be individually controlled, ie: `caddy service mailhog start/stop`
 - provide instructions for installing/configuring php
-- create `caddy restart` command (just an alias to `caddy start`?)
+- `caddy restart` command (just an alias to `caddy start`?)
+- allow custom drivers
