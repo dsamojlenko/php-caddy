@@ -1,4 +1,6 @@
-# Introduction
+# PHP Caddy
+
+## Introduction
 PHP Caddy is a **tiny** PHP development environment for Windows, inspired by Laravel Valet.
 
 **No hosts file, no configuration.  Just run it and go.**
