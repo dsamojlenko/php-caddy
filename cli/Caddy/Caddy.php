@@ -20,6 +20,7 @@ class Caddy
     function install()
     {
         $this->stop();
+        $this->installCaddyFile();
         $this->installCaddyBin();
     }
 
@@ -37,7 +38,7 @@ class Caddy
         }
 
         $args = '-root ' . PACKAGE_BASE_PATH;
-        $args .= ' -conf ' . PACKAGE_BASE_PATH . '\Caddyfile';
+        $args .= ' -conf ' . CADDY_HOME_PATH . '\Caddyfile';
 
         $this->stop();
         exec($this->hiddenConsole->path() . ' ' . $this->path() . ' ' . $args);
@@ -47,6 +48,14 @@ class Caddy
     function stop()
     {
         exec('taskkill /im caddy.exe /f >nul 2>&1');
+    }
+
+    function installCaddyFile()
+    {
+        $this->files->put(
+            CADDY_HOME_PATH . '/Caddyfile',
+            $this->files->get(PACKAGE_BASE_PATH . '/Caddyfile')
+        );
     }
 
     function installCaddyBin()
