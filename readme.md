@@ -1,5 +1,5 @@
 # Introduction
-PHP Caddy is a **tiny** PHP development environment for Windows minimalists, inspired by Laravel Valet.
+PHP Caddy is a **tiny** PHP development environment for Windows, inspired by Laravel Valet.
 
 **No hosts file, no configuration.  Just run it and go.**
 
@@ -9,7 +9,7 @@ and no sharing over local tunnels.  At least for now ;)
 Built with [Caddy](https://caddyserver.com/) web server, PHP Caddy also includes [Mailhog](https://github.com/mailhog/MailHog) 
 for catching email sent by your application.
 
-**NOTE**: This package is for extreme minimalists.  It is very limited in its capabilities and it may not work for 
+**NOTE**: This package is for minimalists.  It is very limited in its capabilities and it may not work for 
 your particular use-case.
 - If you are on MacOS you should probably just use [Laravel Valet](https://laravel.com/docs/5.4/valet).  
 - If you want something more Valet-like for Windows, check out [Valet4Windows](https://github.com/vitr/valet4windows).
@@ -45,3 +45,19 @@ Set your outgoing SMTP to 127.0.0.1:1025
 ```
 caddy down
 ```
+
+## Supported Frameworks and Applications
+PHP Caddy comes with the same set of default drivers as Valet, so out of the
+box it supports:
+
+- Laravel
+- Lumen
+- Symfony
+- Zend
+- CakePHP 3
+- WordPress
+- Bedrock
+- Craft
+- Statamic
+- Jigsaw
+- Static HTML
