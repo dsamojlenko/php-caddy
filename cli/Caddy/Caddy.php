@@ -23,13 +23,25 @@ class Caddy
         $this->installCaddyBin();
     }
 
+    function start()
+    {
+        return $this->restart();
+    }
+
     function restart()
     {
+        if (!$this->installed())
+        {
+            Output::warning('Caddy server is not installed');
+            return false;
+        }
+
         $args = '-root ' . PACKAGE_BASE_PATH;
         $args .= ' -conf ' . PACKAGE_BASE_PATH . '\Caddyfile';
 
         $this->stop();
         exec($this->hiddenConsole->path() . ' ' . $this->path() . ' ' . $args);
+        return true;
     }
 
     function stop()
@@ -49,6 +61,11 @@ class Caddy
     {
         $this->stop();
         $this->files->unlink($this->path());
+    }
+
+    function installed()
+    {
+        return $this->files->exists($this->path());
     }
 
     function path()

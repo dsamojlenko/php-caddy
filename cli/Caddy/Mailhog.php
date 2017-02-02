@@ -26,10 +26,22 @@ class Mailhog
         );
     }
 
+    function start()
+    {
+        return $this->restart();
+    }
+
     function restart()
     {
+        if (!$this->installed())
+        {
+            Output::warning('Mailhog is not installed');
+            return false;
+        }
+
         $this->stop();
         exec($this->hiddenConsole->path() . ' ' . $this->path());
+        return true;
     }
 
     function stop()
@@ -41,6 +53,11 @@ class Mailhog
     {
         $this->stop();
         $this->files->unlink($this->path());
+    }
+
+    function installed()
+    {
+        return $this->files->exists($this->path());
     }
 
     function path()

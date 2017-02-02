@@ -25,6 +25,11 @@ class HiddenConsole
         $this->files->unlink($this->path());
     }
 
+    function installed()
+    {
+        return $this->files->exists($this->path());
+    }
+
     function path()
     {
         return CADDY_BIN_PATH . '/RunHiddenConsole.exe';
