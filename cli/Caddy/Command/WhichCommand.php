@@ -1,5 +1,6 @@
 <?php namespace Caddy\Command;
 
+use Caddy\Output;
 use ValetDriver;
 
 class WhichCommand
@@ -8,9 +9,9 @@ class WhichCommand
     {
         $driver = ValetDriver::assign(getcwd(), basename(getcwd()), '/');
         if ($driver) {
-            info('This site is served by ['.get_class($driver).'].');
+            Output::info('This site is served by ['.get_class($driver).'].');
         } else {
-            warning('Valet could not determine which driver to use for this site.');
+            Output::warning('Valet could not determine which driver to use for this site.');
         }
     }
 }

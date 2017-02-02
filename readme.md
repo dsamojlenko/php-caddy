@@ -51,6 +51,8 @@ caddy stop
 
 | Command | Description |
 | --- | --- |
+| `caddy install` | Install PHP Caddy services |
+| `caddy uninstall` | Remove PHP Caddy services |
 | `caddy start` | Start the Caddy services and Link the current directory |
 | `caddy stop` | Stop the Caddy services |
 | `caddy which` | Determine which Valet driver serves the current working directory |

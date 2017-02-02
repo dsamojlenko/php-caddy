@@ -15,12 +15,6 @@ class Filesystem
         $this->cmd = $cmd;
     }
 
-    function createSiteLink($target)
-    {
-        $this->ensureDirExists(CADDY_HOME_PATH);
-        $this->symlink($target, CADDY_HOME_PATH . '\\site');
-    }
-
     function symlink($target, $link)
     {
         if ($this->exists($link)) {
@@ -103,9 +97,41 @@ class Filesystem
      */
     function unlink($path)
     {
-        if (file_exists($path) || is_link($path)) {
+        if ($this->isDir($path) || is_link($path)) {
             @rmdir($path);
         }
+
+        @unlink($path);
     }
+
+    /**
+     * Read the contents of the given file.
+     *
+     * @param string $path
+     *
+     * @return string
+     */
+    public function get($path)
+    {
+        return file_get_contents($path);
+    }
+
+    /**
+     * Write to the given file.
+     *
+     * @param string      $path
+     * @param string      $contents
+     * @param string|null $owner
+     *
+     * @return string
+     */
+    public function put($path, $contents, $owner = null)
+    {
+        file_put_contents($path, $contents);
+        if ($owner) {
+            $this->chown($path, $owner);
+        }
+    }
+
 
 }

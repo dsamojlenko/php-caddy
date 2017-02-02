@@ -1,24 +1,26 @@
 <?php namespace Caddy\Command;
 
 use Caddy\Caddy;
-use Caddy\Filesystem;
+use Caddy\Output;
 use Caddy\Mailhog;
 use Caddy\PhpCgi;
+use Caddy\Site;
 
 class StartCommand
 {
-    public function __invoke(Caddy $caddy, Mailhog $mailhog, PhpCgi $php, Filesystem $files)
+    public function __invoke(Caddy $caddy, Mailhog $mailhog, PhpCgi $php, Site $site)
     {
-        info('Caddying up...');
+        Output::info('Caddying up...');
 
-        $files->createSiteLink(getcwd());
+        // check installation
 
+        $site->link(getcwd());
         $php->restart();
         $caddy->restart();
         $mailhog->restart();
 
-        info('Caddy services have been started.');
-        info('You may access your site at http://localhost');
-        info('You may access mailhog at http://localhost:8025');
+        Output::info('Caddy services have been started.');
+        Output::info('You may access your site at http://localhost');
+        Output::info('You may access mailhog at http://localhost:8025');
     }
 }
