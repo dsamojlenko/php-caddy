@@ -1,5 +1,6 @@
 # TODO
 - allow custom drivers
+- setup caddy log files
 - make Mailhog optional at startup and allow to be individually controlled, ie: `caddy service mailhog start/stop`
 - provide instructions for installing/configuring php
 - replace HiddenConsole with https://github.com/kohsuke/winsw (?)
