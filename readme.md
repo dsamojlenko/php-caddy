@@ -3,10 +3,11 @@
 ## Introduction
 PHP Caddy is a **tiny** PHP development environment for Windows, inspired by Laravel Valet.
 
-**No hosts file, no configuration, no administrator account.  Just run it and go.**
+**No hosts file, no configuration, no frills.  Just run it and go.**
 
-PHP Caddy is basically a stripped down Valet: no *.dev domain proxy (only localhost), no linking multiple sites, 
-and no sharing over local tunnels.  At least for now ;)
+PHP Caddy is basically a stripped down Valet: no *.dev domain proxy (only localhost), no linking multiple sites or
+parking whole directories, and no sharing over local tunnels.  It also doesn't require elevated privileges to run
+like some of the other Windows alternatives, which can make things easier for people in corporate environments.
 
 Built with [Caddy](https://caddyserver.com/) web server, PHP Caddy also includes [Mailhog](https://github.com/mailhog/MailHog) 
 for catching email sent by your application.
@@ -14,7 +15,7 @@ for catching email sent by your application.
 This package is for minimalists.  It does not have the full feature set of Valet, and it doesn't provide the
 robust features of a virtualized environment like Homestead.
 - If you are on MacOS you should probably just use [Laravel Valet](https://laravel.com/docs/5.4/valet).  
-- If you want something more Valet-like for Windows, check out [Valet4Windows](https://github.com/vitr/valet4windows) or [valet-windows](https://github.com/cretueusebiu/valet-windows).
+- If you want something more Valet-like for Windows, check out [valet-windows](https://github.com/cretueusebiu/valet-windows).
 - If you want a fully virtualized Linux development environment, use [Laravel Homestead](https://laravel.com/docs/5.4/homestead).
 - If you're on Windows and you want a fast, easy to use local development environment with minimal resource consumption, read on!
 
@@ -47,7 +48,7 @@ Site will be available at:
 caddy stop
 ```
 
-### Commands
+### Available Commands
 
 | Command | Description |
 | --- | --- |
@@ -58,8 +59,7 @@ caddy stop
 | `caddy uninstall` | Remove PHP Caddy services |
 
 ## Supported Frameworks and Applications
-PHP Caddy comes with the same set of default drivers as Valet, so out of the
-box it supports:
+PHP Caddy comes with the same default set of drivers as Valet, so out of the box it supports:
 
 - Laravel
 - Lumen
