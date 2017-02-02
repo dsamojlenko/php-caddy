@@ -14,7 +14,7 @@ for catching email sent by your application.
 **NOTE**: This package is for minimalists.  It does not have the full feature set of Valet, and it doesn't provide the
 robust features of a virtualized environment like Homestead.
 - If you are on MacOS you should probably just use [Laravel Valet](https://laravel.com/docs/5.4/valet).  
-- If you want something more Valet-like for Windows, check out [Valet4Windows](https://github.com/vitr/valet4windows).
+- If you want something more Valet-like for Windows, check out [Valet4Windows](https://github.com/vitr/valet4windows) or [valet-windows](https://github.com/cretueusebiu/valet-windows).
 - If you want a fully virtualized Linux development environment, use [Laravel Homestead](https://laravel.com/docs/5.4/homestead).
 - If you're on Windows and you want a fast, easy to use local development environment with minimal resource consumption, read on!
 
