@@ -1,6 +1,6 @@
 {
   "name": "samojled/php-caddy",
-  "description": "A more enjoyable local development experience for Windows.",
+  "description": "A tiny php development environment for Windows",
   "keywords": ["laravel", "windows", "caddy", "caddyserver"],
   "license": "MIT",
   "authors": [
