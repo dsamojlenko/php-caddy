@@ -1,5 +1,6 @@
 <?php
-define('CADDY_HOME_PATH', $_SERVER['HOMEDRIVE'] . $_SERVER['HOMEPATH'].'/.phpcaddy');
+
+include(__DIR__.'/cli/includes/constants.php');
 
 /**
  * Show the 404 "Not Found" page.
