@@ -9,11 +9,12 @@ and no sharing over local tunnels.  At least for now ;)
 Built with [Caddy](https://caddyserver.com/) web server, PHP Caddy also includes [Mailhog](https://github.com/mailhog/MailHog) 
 for catching email sent by your application.
 
-**NOTE**: This package is for minimalists.  It is very limited in its capabilities and it may not work for 
-your particular use-case.
+**NOTE**: This package is for minimalists.  It does not have the full feature set of Valet, and it doesn't provide the
+robust features of a virtualized environment like Homestead.
 - If you are on MacOS you should probably just use [Laravel Valet](https://laravel.com/docs/5.4/valet).  
 - If you want something more Valet-like for Windows, check out [Valet4Windows](https://github.com/vitr/valet4windows).
 - If you want a fully virtualized Linux development environment, use [Laravel Homestead](https://laravel.com/docs/5.4/homestead).
+- If you want a fast, simple to use local development environment with minimal resource consumption, read on!
 
 ## Requirements
 - [PHP](http://windows.php.net/) (installed in C:\php and configured for Laravel)
