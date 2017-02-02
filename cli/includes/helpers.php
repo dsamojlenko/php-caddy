@@ -7,14 +7,13 @@ $package_includes_path = realpath(dirname(__FILE__));
 $package_base_path = $package_includes_path . '\\..\\..\\';
 $package_bin_path = $package_base_path . '\\bin\\';
 
-define('BIN_PATH', $package_bin_path);
-define('BASE_PATH', $package_base_path);
-define('VALET_STATIC_PREFIX', '41c270e4-5535-4daa-b23e-c269744c2f45');
+define('CADDY_BIN_PATH', $package_bin_path);
+define('PACKAGE_BASE_PATH', $package_base_path);
 
 /**
- * Define the ~/.valet path as a constant.
+ * Define the ~/.phpcaddy path as a constant.
  */
-define('VALET_HOME_PATH', $_SERVER['HOMEDRIVE'] . $_SERVER['HOMEPATH'].'/.phaddy');
+define('CADDY_HOME_PATH', $_SERVER['HOMEDRIVE'] . $_SERVER['HOMEPATH'].'/.phpcaddy');
 
 /**
  * Output the given text to the console.

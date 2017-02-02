@@ -4,15 +4,11 @@ class Caddy
 {
     function restart()
     {
-        // $site_root = realpath(getcwd());
-        $site_root = BASE_PATH;
-        $caddy_file = BASE_PATH . '\Caddyfile';
+        $console_bin = CADDY_BIN_PATH . '\RunHiddenConsole.exe';
+        $caddy_bin = CADDY_BIN_PATH . '\caddy.exe';
 
-        $console_bin = BIN_PATH . '\RunHiddenConsole.exe';
-        $caddy_bin = BIN_PATH . '\caddy.exe';
-
-        $args = '-root ' . $site_root;
-        $args .= ' -conf ' . $caddy_file;
+        $args = '-root ' . PACKAGE_BASE_PATH;
+        $args .= ' -conf ' . PACKAGE_BASE_PATH . '\Caddyfile';
 
         $this->stop();
         exec($console_bin . ' ' . $caddy_bin . ' ' . $args);

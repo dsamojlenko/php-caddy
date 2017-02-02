@@ -17,8 +17,8 @@ class Filesystem
 
     function createSiteLink($target)
     {
-        $this->ensureDirExists(VALET_HOME_PATH);
-        $this->symlink($target, VALET_HOME_PATH . '\\site');
+        $this->ensureDirExists(CADDY_HOME_PATH);
+        $this->symlink($target, CADDY_HOME_PATH . '\\site');
     }
 
     function symlink($target, $link)

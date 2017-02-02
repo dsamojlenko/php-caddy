@@ -1,8 +1,8 @@
 <?php
-define('VALET_HOME_PATH', $_SERVER['HOMEDRIVE'] . $_SERVER['HOMEPATH'].'/.phaddy');
+define('CADDY_HOME_PATH', $_SERVER['HOMEDRIVE'] . $_SERVER['HOMEPATH'].'/.phpcaddy');
 
 /**
- * Show the Valet 404 "Not Found" page.
+ * Show the 404 "Not Found" page.
  */
 function show_valet_404()
 {
@@ -18,7 +18,7 @@ $uri = urldecode(
     parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
 );
 
-$valetSitePath = VALET_HOME_PATH . '/site';
+$valetSitePath = CADDY_HOME_PATH . '/site';
 $siteName = basename(getcwd());
 
 /**
