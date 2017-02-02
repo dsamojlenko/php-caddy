@@ -3,7 +3,7 @@
 
 use Silly\Edition\PhpDi\Application;
 
-$version = '1.1';
+$version = '1.2';
 
 $app = new Application('PHP Caddy', $version);
 
