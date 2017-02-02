@@ -31,7 +31,7 @@ composer global require samojled/php-caddy
 ## Usage
 Make sure your global composer vendor/bin folder is in your system path.
 
-### Start it up:
+### Start it up
 ```
 cd {your laravel project directory}
 caddy start
@@ -42,12 +42,12 @@ Site will be available at:
 - Mailhog will be available at http://localhost:8025
 - Set your outgoing SMTP to 127.0.0.1:1025
 
-### Shut it down:
+### Shut it down
 ```
 caddy stop
 ```
 
-### Caddy Commands
+### Commands
 
 | Command | Description |
 | --- | --- |
@@ -59,8 +59,6 @@ caddy stop
 
 | Command | Description |
 | --- | --- |
-| `caddy link` | Link current directory |
-| `caddy links` | Output a list of currently linked directories |
 | `caddy restart` | Restart PHP Caddy services |
 | `caddy service mailhog start` | Start the Mailhog service |
 | `caddy service mailhog stop` | Stop the Mailhog service |
