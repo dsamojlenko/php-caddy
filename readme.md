@@ -34,7 +34,7 @@ Make sure your global composer vendor/bin folder is in your system path.
 ### Start it up:
 ```
 cd {your laravel project directory}
-caddy up
+caddy start
 ```
 
 Site will be available at:
@@ -44,7 +44,7 @@ Site will be available at:
 
 ### Shut it down:
 ```
-caddy down
+caddy stop
 ```
 
 ### Caddy Commands
