@@ -48,7 +48,7 @@ abstract class ValetDriver
             $drivers[] = $customSiteDriver;
         }
 
-        // $drivers = array_merge($drivers, static::driversIn());
+        $drivers = array_merge($drivers, static::driversIn(CADDY_HOME_PATH.'/Drivers'));
 
         $drivers[] = 'LaravelValetDriver';
 

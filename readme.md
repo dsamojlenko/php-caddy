@@ -73,6 +73,18 @@ PHP Caddy comes with the same default set of drivers as Valet, so out of the box
 - Jigsaw
 - Static HTML
 
+## Custom Valet Drivers
+ 
+You can write your own Valet driver to support PHP applications not in the list above, in the same way you can with
+Laravel Valet.  
+
+When you install PHP Caddy, a `~/.phpcaddy/Drivers` directory is created which contains a `SampleValetDriver.php` file
+you can use as a guide.  To use your custom driver, either place it in the `~/.phpcaddy/Drivers` directory, or in the 
+root path of your project, and it will be picked up by PHP Caddy.
+
+See more info on creating custom drivers in the Laravel Valet docs: 
+[Custom Valet Drivers](https://laravel.com/docs/5.4/valet#custom-valet-drivers) 
+
 ## License and Attribution
 Parts of the original [Laravel Valet](https://laravel.com/docs/5.4/valet) source code were used in whole or in part 
 in building this project, and are covered under the original Valet License 
