@@ -112,6 +112,10 @@ root path of your project, and it will be picked up by PHP Caddy.
 See more info on creating custom drivers in the Laravel Valet docs: 
 [Custom Valet Drivers](https://laravel.com/docs/5.4/valet#custom-valet-drivers) 
 
+## Upgrading
+You can update PHP Caddy using the `composer global update` command.  After upgrading, you may need to run 
+`caddy install` to make any necessary configuration changes.
+
 ## License and Attribution
 Parts of the original [Laravel Valet](https://laravel.com/docs/5.4/valet) source code were used in whole or in part 
 in building this project, and are covered under the original Valet License 
