@@ -1,4 +1,3 @@
-#!/usr/bin/env php
 <?php
 
 use Silly\Edition\PhpDi\Application;
