@@ -18,6 +18,7 @@ class StartCommand
 
         // link current directory
         $site->link(getcwd());
+        Output::info('Linked Caddy to current directory: ' . getcwd());
 
         // make sure hiddenConsole is installed otherwise nothing else works
         if (!$hiddenConsole->installed()) {

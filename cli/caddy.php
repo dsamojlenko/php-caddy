@@ -10,6 +10,9 @@ $app = new Application('PHP Caddy', $version);
 $app->command('install', 'Caddy\Command\InstallCommand')
     ->descriptions('Install the PHP Caddy services');
 
+$app->command('link', 'Caddy\Command\LinkCommand')
+    ->descriptions('Link the current directory');
+
 $app->command('service [service] [cmd]', 'Caddy\Command\ServiceCommand')
     ->descriptions('Control individual services');
 

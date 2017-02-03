@@ -48,6 +48,12 @@ Site will be available at:
 caddy stop
 ```
 
+### Switch directories (serve a different project)
+```
+cd {another php project}
+caddy link
+```
+
 ### Control individual services
 ```
 # Mailhog
@@ -71,6 +77,7 @@ caddy service php restart
 | Command | Description |
 | --- | --- |
 | `caddy install` | Install PHP Caddy services |
+| `caddy link` | Link Caddy to the current directory |
 | `caddy start` | Start the Caddy services and Link the current directory. |
 | `caddy start --without-mailhog` | For a slightly lighter resource footprint |
 | `caddy stop` | Stop the Caddy services |
