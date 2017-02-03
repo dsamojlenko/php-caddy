@@ -73,7 +73,7 @@ PHP Caddy comes with the same default set of drivers as Valet, so out of the box
 - Jigsaw
 - Static HTML
 
-## Custom Valet Drivers
+### Custom Valet Drivers
  
 You can write your own Valet driver to support PHP applications not in the list above, in the same way you can with
 Laravel Valet.  
