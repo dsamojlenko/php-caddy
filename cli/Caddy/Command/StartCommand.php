@@ -6,24 +6,37 @@ use Caddy\Output;
 use Caddy\Mailhog;
 use Caddy\PhpCgi;
 use Caddy\Site;
+use Symfony\Component\Console\Input\InputInterface;
 
 class StartCommand
 {
-    public function __invoke(Caddy $caddy, Mailhog $mailhog, PhpCgi $php, HiddenConsole $hiddenConsole, Site $site)
+    public function __invoke(InputInterface $input, Caddy $caddy, Mailhog $mailhog, PhpCgi $php, HiddenConsole $hiddenConsole, Site $site)
     {
-        Output::info('Caddying up...');
+        Output::info('Starting services...');
 
+        $withoutMailhog = $input->getOption('without-mailhog');
+
+        // link current directory
         $site->link(getcwd());
 
+        // make sure hiddenConsole is installed otherwise nothing else works
         if (!$hiddenConsole->installed()) {
             Output::warning('Some caddy services seem to be missing.  Try installing');
             exit;
         }
 
-        if ($php->start() && $caddy->start() && $mailhog->start()) {
+        // start php and caddy first
+        if ($php->start() && $caddy->start()) {
             Output::info('Caddy services have been started.');
             Output::info('You may access your site at http://localhost');
-            Output::info('You may access mailhog at http://localhost:8025');
+
+            // start mailhog unless specifically excluded
+            if (!$withoutMailhog) {
+                if ($mailhog->start()) {
+                    Output::info('You may access mailhog at http://localhost:8025');
+                    Output::info('SMTP service is available at 127.0.0.1:1025');
+                }
+            }
             return;
         }
 

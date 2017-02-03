@@ -1,5 +1,5 @@
 # TODO
-- make Mailhog optional at startup and allow to be individually controlled, ie: `caddy service mailhog start/stop`
+- allow services to be individually controlled, ie: `caddy service mailhog start/stop`
 - provide instructions for installing/configuring php
 - replace HiddenConsole with https://github.com/kohsuke/winsw (?)
 - use http://localtest.me/ for wildcard subdomain support

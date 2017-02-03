@@ -48,15 +48,24 @@ Site will be available at:
 caddy stop
 ```
 
+### Control individual services
+```
+caddy service mailhog start
+caddy service mailhog stop
+caddy service mailhog restart
+```
+
 ### Available Commands
 
 | Command | Description |
 | --- | --- |
 | `caddy install` | Install PHP Caddy services |
-| `caddy start` | Start the Caddy services and Link the current directory |
+| `caddy start` | Start the Caddy services and Link the current directory. |
+| `caddy start --without-mailhog` | For a slightly lighter resource footprint |
 | `caddy stop` | Stop the Caddy services |
 | `caddy which` | Determine which Valet driver serves the current working directory |
 | `caddy uninstall` | Remove PHP Caddy services |
+| `caddy service [service] [command]` | Start or Stop services |
 
 ## Supported Frameworks and Applications
 PHP Caddy comes with the same default set of drivers as Valet, so out of the box it supports:

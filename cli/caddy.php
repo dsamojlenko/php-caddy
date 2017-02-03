@@ -10,7 +10,10 @@ $app = new Application('PHP Caddy', $version);
 $app->command('install', 'Caddy\Command\InstallCommand')
     ->descriptions('Install the PHP Caddy services');
 
-$app->command('start', 'Caddy\Command\StartCommand')
+$app->command('service [service] [cmd]', 'Caddy\Command\ServiceCommand')
+    ->descriptions('Control individual services');
+
+$app->command('start [--without-mailhog]', 'Caddy\Command\StartCommand')
     ->descriptions('Start up the PHP Cadddy services');
 
 $app->command('stop', 'Caddy\Command\StopCommand')
