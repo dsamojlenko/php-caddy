@@ -92,4 +92,28 @@ class ServiceCommand
         Output::warning('Unknown command');
         exit;
     }
+
+    function php($cmd)
+    {
+        if ($cmd == 'start') {
+            $this->php->start();
+            Output::info('PHP started');
+            exit;
+        }
+
+        if ($cmd == 'stop') {
+            $this->php->stop();
+            Output::info('PHP stopped');
+            exit;
+        }
+
+        if ($cmd == 'restart') {
+            $this->php->restart();
+            Output::info('PHP restarted');
+            exit;
+        }
+
+        Output::warning('Unknown command');
+        exit;
+    }
 }
