@@ -127,3 +127,5 @@ The Caddy and Mailhog binaries are covered under their respective licenses.
 
 PHP Caddy is Copyright (c) 2017 Dave Samojlenko and licensed under the MIT license 
 - [PHP Caddy License](LICENSE.txt)
+
+![Powered by Caddy](https://raw.githubusercontent.com/dsamojlenko/php-caddy/master/powered-by-caddy.png)
