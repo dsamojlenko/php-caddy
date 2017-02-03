@@ -55,7 +55,7 @@ class Caddy
     {
         $this->files->put(
             CADDY_HOME_PATH . '\\Caddyfile',
-            str_replace('CADDY_HOME_PATH', CADDY_HOME_PATH, $this->files->get(PACKAGE_BASE_PATH . '\\Caddyfile'))
+            str_replace('CADDY_HOME_PATH', CADDY_HOME_PATH, $this->files->get(PACKAGE_BASE_PATH . '\\cli\\stubs\\Caddyfile'))
         );
     }
 
