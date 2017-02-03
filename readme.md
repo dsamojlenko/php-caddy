@@ -50,9 +50,20 @@ caddy stop
 
 ### Control individual services
 ```
+# Mailhog
 caddy service mailhog start
 caddy service mailhog stop
 caddy service mailhog restart
+
+# Http (Caddy)
+caddy service http start
+caddy service http stop
+caddy service http restart
+
+# PHP
+caddy service php start
+caddy service php stop
+caddy service php restart
 ```
 
 ### Available Commands

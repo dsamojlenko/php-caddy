@@ -68,7 +68,7 @@ class ServiceCommand
         exit;
     }
 
-    function caddy($cmd)
+    function http($cmd)
     {
         if ($cmd == 'start') {
             $this->caddy->start();
