@@ -38,10 +38,10 @@ cd {your php project directory}
 caddy start
 ```
 
-Site will be available at:
-- http://localhost
-- Mailhog will be available at http://localhost:8025
-- Set your outgoing SMTP to 127.0.0.1:1025
+- Current directory will be linked 
+- Site: http://localhost
+- Mailhog: http://localhost:8025
+- SMTP: 127.0.0.1:1025
 
 ### Shut it down
 ```
