@@ -76,7 +76,7 @@ caddy service php restart
 | `caddy stop` | Stop the Caddy services |
 | `caddy which` | Determine which Valet driver serves the current working directory |
 | `caddy uninstall` | Remove PHP Caddy services |
-| `caddy service [service] [command]` | Start or Stop services |
+| `caddy service [service] [command]` | Start/Stop/Restart individual services |
 
 ## Supported Frameworks and Applications
 PHP Caddy comes with the same default set of drivers as Valet, so out of the box it supports:
