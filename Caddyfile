@@ -1,6 +1,25 @@
 :80 {
-    fastcgi / 127.0.0.1:9000 php
+    fastcgi / 127.0.0.1:9000 php {
+        index server.php
+    }
+
     rewrite {
         to /server.php?{query}
+    }
+
+    log CADDY_HOME_PATH\Logs\access.log {
+        rotate {
+            size 10
+            age 3
+            keep 1
+        }
+    }
+
+    errors {
+        log CADDY_HOME_PATH\Logs\error.log {
+            size 10
+            age 3
+            keep 1
+         }
     }
 }

@@ -20,6 +20,7 @@ class Caddy
     function install()
     {
         $this->stop();
+        $this->createLogDirectory();
         $this->installCaddyFile();
         $this->installCaddyBin();
     }
@@ -53,8 +54,8 @@ class Caddy
     function installCaddyFile()
     {
         $this->files->put(
-            CADDY_HOME_PATH . '/Caddyfile',
-            $this->files->get(PACKAGE_BASE_PATH . '/Caddyfile')
+            CADDY_HOME_PATH . '\\Caddyfile',
+            str_replace('CADDY_HOME_PATH', CADDY_HOME_PATH, $this->files->get(PACKAGE_BASE_PATH . '\\Caddyfile'))
         );
     }
 
@@ -62,8 +63,20 @@ class Caddy
     {
         $this->files->put(
             $this->path(),
-            $this->files->get(PACKAGE_BASE_PATH . '/bin/caddy.exe')
+            $this->files->get(PACKAGE_BASE_PATH . '\\bin\\caddy.exe')
         );
+    }
+
+    /**
+     * Create the directory for Caddy log.
+     *
+     * @return void
+     */
+    function createLogDirectory()
+    {
+        $this->files->ensureDirExists(CADDY_HOME_PATH.'\\Logs');
+        $this->files->touch(CADDY_HOME_PATH.'\\Logs\\access.log');
+        $this->files->touch(CADDY_HOME_PATH.'\\Logs\\error.log');
     }
 
     function uninstall()
@@ -79,6 +92,6 @@ class Caddy
 
     function path()
     {
-        return CADDY_BIN_PATH . '/caddy.exe';
+        return CADDY_BIN_PATH . '\\caddy.exe';
     }
 }

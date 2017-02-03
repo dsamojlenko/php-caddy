@@ -128,10 +128,28 @@ class Filesystem
     public function put($path, $contents, $owner = null)
     {
         file_put_contents($path, $contents);
+
         if ($owner) {
             $this->chown($path, $owner);
         }
     }
 
+    /**
+     * Touch the given path.
+     *
+     * @param string      $path
+     * @param string|null $owner
+     *
+     * @return string
+     */
+    public function touch($path, $owner = null)
+    {
+        touch($path);
 
+        if ($owner) {
+            $this->chown($path, $owner);
+        }
+
+        return $path;
+    }
 }

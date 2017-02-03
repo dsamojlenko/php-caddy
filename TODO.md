@@ -1,6 +1,5 @@
 # TODO
 - allow custom drivers
-- setup caddy log files
 - make Mailhog optional at startup and allow to be individually controlled, ie: `caddy service mailhog start/stop`
 - provide instructions for installing/configuring php
 - replace HiddenConsole with https://github.com/kohsuke/winsw (?)
@@ -8,3 +7,4 @@
 - allow multiple site links
   - `caddy link` and `caddy links`
 - `caddy restart` command (just an alias to `caddy start`?)
+- `caddy package` to package up the current site in a self-contained server pack?  (how to deal with php/mysql?)
