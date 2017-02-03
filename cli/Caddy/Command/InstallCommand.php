@@ -37,6 +37,8 @@ class InstallCommand
     {
         Output::info('Installing PHP Caddy...');
 
+        $this->stopServices();
+
         $this->createCaddyHomePath();
         $this->createCaddyBinPath();
         $this->createDriversDirectory();
@@ -44,6 +46,12 @@ class InstallCommand
         $this->caddy->install();
         $this->mailhog->install();
         $this->hiddenConsole->install();
+    }
+
+    public function stopServices()
+    {
+        $this->caddy->stop();
+        $this->mailhog->stop();
     }
 
     public function createCaddyHomePath()
