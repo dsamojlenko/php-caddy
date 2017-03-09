@@ -20,9 +20,19 @@ robust features of a virtualized environment like Homestead.
 - If you're on Windows and you want a fast, easy to use local development environment with minimal resource consumption, read on!
 
 ## Requirements
-- [PHP](http://windows.php.net/) (installed in C:\php and configured for Laravel)
+- [PHP (7.1 recommended)](http://windows.php.net/) (installed in C:\php and configured for Laravel)
 - [Composer](https://getcomposer.org/)
 - A database, if you need one (MySql/Mariadb/Sqlite)
+
+### PHP 7.1
+We highly recommend installing PHP 7.1.  There seems to be an issue with long-running php-cgi.exe processes in PHP 7.0 
+and earlier.  The process randomly crashes after a period of time, triggering a `502 Bad Gateway` in PHP Caddy.
+
+If you are getting frequent `502 Bad Gateway` errors, try upgrading to PHP 7.1 and make sure you're running the latest
+PHP Caddy by running `composer global update`.  PHP 7.1 allows us to run multiple php-cgi.exe processes, which seems
+to alleviate the problem.
+
+If you can't upgrade PHP, then you can restart PHP when this happens using `caddy service php restart`.
 
 ## Installation instructions
 ```

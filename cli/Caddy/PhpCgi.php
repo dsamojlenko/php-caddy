@@ -31,7 +31,7 @@ class PhpCgi
         }
 
         $this->stop();
-        exec($this->hiddenConsole->path() . ' ' . $this->path() . ' -b 127.0.0.1:9000');
+        exec('set PHP_FCGI_CHILDREN=2 && ' . $this->hiddenConsole->path() . ' ' . $this->path() . ' -b 127.0.0.1:9000');
         return true;
     }
 
