@@ -6,7 +6,7 @@ PHP Caddy is a **tiny** PHP development environment for Windows, inspired by Lar
 **No hosts file, no configuration, no frills.  Just run it and go write some code.**
 
 PHP Caddy is basically a stripped down Valet: no *.dev domain proxy (only localhost), no linking multiple sites or
-parking whole directories, and no sharing over local tunnels.  It also doesn't require elevated privileges to run
+parked directories, and no sharing over local tunnels.  It also doesn't require elevated privileges to run
 like some of the other Windows alternatives, which can make things easier for people in corporate environments.
 
 Built with [Caddy](https://caddyserver.com/) web server, PHP Caddy also includes [Mailhog](https://github.com/mailhog/MailHog) 
@@ -14,7 +14,7 @@ for catching email sent by your application.
 
 This package is for minimalists.  It does not have the full feature set of Valet, and it doesn't provide the
 robust features of a virtualized environment like Homestead.
-- If you are on MacOS you should probably just use [Laravel Valet](https://laravel.com/docs/5.4/valet) because it's awesome.  
+- If you are on macOS you should probably just use [Laravel Valet](https://laravel.com/docs/5.4/valet) because it's awesome.  
 - If you want something more Valet-like for Windows, check out [valet-windows](https://github.com/cretueusebiu/valet-windows).
 - If you want a fully virtualized Linux development environment, use [Laravel Homestead](https://laravel.com/docs/5.4/homestead).
 - If you're on Windows and you want a fast, easy to use local development environment with minimal resource consumption, read on!
@@ -24,13 +24,13 @@ robust features of a virtualized environment like Homestead.
 - [Composer](https://getcomposer.org/)
 - A database, if you need one (MySql/Mariadb/Sqlite)
 
-### PHP 7.1
-We highly recommend installing PHP 7.1.  There seems to be an issue with long-running php-cgi.exe processes in PHP 7.0 
-and earlier.  The process randomly crashes after a period of time, triggering a `502 Bad Gateway` in PHP Caddy.
+### 502 Bad Gateway
+There seems to be an issue with long-running php-cgi.exe processes in PHP 7.0 and earlier on Windows.  The process randomly crashes after a period of time, causing a `502 Bad Gateway` in PHP Caddy.
+
+PHP 7.1 introduced the ability to run multiple php-cgi.exe processes, which seems to alleviate this problem.
 
 If you are getting frequent `502 Bad Gateway` errors, try upgrading to PHP 7.1 and make sure you're running the latest
-PHP Caddy by running `composer global update`.  PHP 7.1 allows us to run multiple php-cgi.exe processes, which seems
-to alleviate the problem.
+PHP Caddy by running `composer global update`.
 
 If you can't upgrade PHP, then you can restart PHP when this happens using `caddy service php restart`.
 
