@@ -132,8 +132,8 @@ in building this project, and are covered under the original Valet License
 - [Valet License](ValetLicense.txt)
 
 The Caddy and Mailhog binaries are covered under their respective licenses. 
-- [Caddy License](bin/CaddyLicense.txt) 
-- [Mailhog License](bin/MailhogLicense.txt)
+- [Caddy License](CaddyLicense.txt) 
+- [Mailhog License](MailhogLicense.txt)
 
 PHP Caddy is Copyright (c) 2017 Dave Samojlenko and licensed under the MIT license 
 - [PHP Caddy License](LICENSE.txt)
