@@ -1,6 +1,0 @@
-@ECHO OFF
-ECHO Starting PHP FastCGI...
-set PATH=C:\PHP;%PATH%
-bin\RunHiddenConsole.exe php-cgi -b 127.0.0.1:9000
-ECHO Starting Mailhog...
-bin\RunHiddenConsole.exe bin\mailhog.exe
