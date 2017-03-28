@@ -1,8 +1,3 @@
----
-title: PHP Caddy
-description: A tiny PHP development environment for Windows, inspired by Laravel Valet.
-google_analytics: UA-10503731-2
----
 # PHP Caddy
 
 ## Introduction

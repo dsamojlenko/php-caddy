@@ -1,1 +1,4 @@
 theme: jekyll-theme-cayman
+title: PHP Caddy
+description: A tiny PHP development environment for Windows, inspired by Laravel Valet.
+google_analytics: UA-10503731-2
